@@ -1,0 +1,84 @@
+aws:
+  region: 'us-east-1' # TODO: set your region
+  account_id: 'YOUR_ACCOUNT_ID' # TODO: fill
+  role_arn: 'YOUR_SAGEMAKER_ROLE_ARN' # TODO: fill
+
+s3:
+  bucket: 'YOUR_S3_BUCKET' # TODO: fill (e.g. sagemaker-us-east-1-<account>)
+  prefix: 'jewelry-classifier'
+
+ecr:
+  repo_name: 'jewelry-efficientnet'
+  image_tag: 'latest'
+
+model:
+  name: 'efficientnet_b3'
+  img_dim: 300
+  num_classes: 42
+  drop1: 0.4
+  drop2: 0.3
+
+training:
+  epochs: 30
+  batch_size: 8
+  lr: 0.0003
+  weight_decay: 0.0001
+  val_split: 0.2
+  instance_type: 'ml.g4dn.xlarge'
+  volume_size_gb: 50
+  max_run_seconds: 10800
+
+batch_transform:
+  instance_type: 'ml.m5.xlarge'
+
+endpoint:
+  name: 'jewelry-endpoint'
+  instance_type: 'ml.m5.large'
+  instance_count: 1
+
+imagenet_mean: [0.485, 0.456, 0.406]
+imagenet_std: [0.229, 0.224, 0.225]
+
+classes:
+  - anklets
+  - bands
+  - bangles
+  - beaded_bracelets
+  - beaded_necklace
+  - bib_necklaces
+  - cameo_necklaces
+  - chain_and_link_bracelets
+  - chains_necklace
+  - chandbalis
+  - chandelier_earrings
+  - charm_bracelets
+  - charm_necklace
+  - choker_necklace
+  - clip_on_earrings
+  - cluster_earrings
+  - crystal_necklace
+  - cuff_and_wrap_earrings
+  - cuff_bracelets
+  - ear_jackets_and_climbers_earrings
+  - ear_weights
+  - engagement_rings
+  - gauge_and_plug_earrings
+  - hand_chains
+  - hoop_earrings
+  - jhumkas
+  - lockets
+  - mangalsutras
+  - monogram_and_name_necklace
+  - multi_strand_necklace
+  - nose_rings_and_studs
+  - pendent_necklace
+  - rani_haar
+  - screw_back_earrings
+  - signet_rings
+  - solitaire_rings
+  - stackable_rings
+  - statement_rings
+  - stud_earrings
+  - tassel
+  - threader_earrings
+  - woven_and_braided_bracelets

@@ -1,0 +1,4 @@
+[core]
+    remote = s3remote
+['remote "s3remote"']
+    url = s3://drive-data-migration-847013095238-ap-south-1-an/dvc-storage

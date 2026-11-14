@@ -1,0 +1,14 @@
+md5: cf119f2736d1850c48f3ccc70d31f916
+frozen: true
+deps:
+- md5: 68abf8fe67943c26b4ca22a0b6e0d7e3.dir
+  size: 346159297
+  nfiles: 12855
+  hash: md5
+  path: s3://drive-data-migration-847013095238-ap-south-1-an/images
+outs:
+- md5: ba072c193ff0ebdc2d81e43d54522fac.dir
+  size: 346159297
+  nfiles: 12855
+  hash: md5
+  path: images
